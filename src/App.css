@@ -1,6 +1,7 @@
 * {
   /* border: 1px solid black; */
   font-size: calc(9px + 2vmin);
+  font-family: 'Exo', sans-serif;
 }
 
 #root {
