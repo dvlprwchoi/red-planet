@@ -1,5 +1,5 @@
 * {
-  border: 1px solid black;
+  /* border: 1px solid black; */
   font-size: calc(9px + 2vmin);
 }
 
@@ -10,12 +10,49 @@
 
 .App {
   width: clamp(350px, 99%, 1200px);
+  border: 1px solid brown;
+  padding: 1%;
 }
 
 .Header h1 {
   display: flex;
   justify-content: center;
   font-size: calc(12px + 3vmin);
+}
+
+.Main {
+  margin-left: 1%;
+  margin-right: 1%;
+}
+
+h2 {
+  font-size: calc(9px + 1.8vmin);
+  padding-left: 2%;
+}
+
+h3 {
+  font-size: calc(5px + 1vmin);
+}
+
+.multiple-image-container {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.single-image-container {
+  flex: 1 1 200px;
+  border: 1px solid brown;
+  padding: 1%;
+  margin: 1%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.single-image-img img {
+  width: 100px;
+  height: 100px;
 }
 
 .Footer {
@@ -36,7 +73,7 @@
 .credit,
 .credit-link {
   font-size: calc(5px + 1vmin);
-  margin: 0;
+  margin: 0 0 0.5% 0;
 }
 
 .portfolio-link,

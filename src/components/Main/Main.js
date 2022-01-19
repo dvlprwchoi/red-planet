@@ -27,22 +27,15 @@ function Main() {
       {images.length > 0 ? (
         <>
           <h2>Images of Mars</h2>
-          <div className="display-container">
+          <div className="multiple-image-container">
             {images.map((image) => {
               return (
-                <div className="single-image">
+                <div className="single-image-container">
                   <div className="single-image-id">
                     <h3>Image Name (ID): {image.id}</h3>
                   </div>
                   <div className="single-image-img">
-                    {
-                      <img
-                        src={image.img_src}
-                        alt="One of Mars Images"
-                        width="30%"
-                        height="30%"
-                      />
-                    }
+                    {<img src={image.img_src} alt="One of Mars Images" />}
                   </div>
                   <div className="single-image-date">
                     <h3>Date: {image.earth_date}</h3>
