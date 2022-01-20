@@ -20,7 +20,7 @@ function Main() {
     };
     getImages();
   }, []);
-  console.log(images);
+  //   console.log(images);
 
   return (
     <div className="Main">
