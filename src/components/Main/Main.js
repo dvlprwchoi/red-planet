@@ -6,6 +6,14 @@ function Main() {
 
   const [images, setImages] = useState([]);
 
+  const [likeStatus, setLikeStatus] = useState(false);
+
+  const _like = () => {
+    setLikeStatus(likeStatus ? false : true);
+    // console.log('liked');
+    // console.log(likeStatus);
+  };
+
   useEffect(() => {
     const getImages = async () => {
       try {
@@ -28,9 +36,9 @@ function Main() {
         <>
           <h2>Images of Mars</h2>
           <div className="multiple-image-container">
-            {images.map((image) => {
+            {images.map((image, index) => {
               return (
-                <div className="single-image-container">
+                <div className="single-image-container" key={index}>
                   <div className="single-image-id">
                     <h3>Image Name (ID): {image.id}</h3>
                   </div>
@@ -39,6 +47,17 @@ function Main() {
                   </div>
                   <div className="single-image-date">
                     <h3>Date: {image.earth_date}</h3>
+                  </div>
+                  <div className="like-button-div">
+                    {likeStatus ? (
+                      <button className="like-button" onClick={_like}>
+                        LIKE
+                      </button>
+                    ) : (
+                      <button className="like-button" onClick={_like}>
+                        DISLIKE
+                      </button>
+                    )}
                   </div>
                 </div>
               );
