@@ -6,7 +6,7 @@ function Main() {
 
   const [images, setImages] = useState([]);
 
-  const [likeStatus, setLikeStatus] = useState(false);
+  const [likeStatus, setLikeStatus] = useState(true);
 
   const _like = () => {
     setLikeStatus(likeStatus ? false : true);
