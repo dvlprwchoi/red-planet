@@ -7,14 +7,6 @@ function Main() {
 
   const [images, setImages] = useState([]);
 
-  const [likeStatus, setLikeStatus] = useState(true);
-
-  const _like = () => {
-    setLikeStatus(likeStatus ? false : true);
-    // console.log('liked');
-    // console.log(likeStatus);
-  };
-
   useEffect(() => {
     const getImages = async () => {
       try {
@@ -35,11 +27,12 @@ function Main() {
     <div className="Main">
       {images.length > 0 ? (
         <>
-          <SingleImageCard
-            images={images}
-            likeStatus={likeStatus}
-            _like={_like}
-          />
+          <h2>Images of Mars</h2>
+          <div className="multiple-image-container">
+            {images.map((image, index) => {
+              return <SingleImageCard image={image} key={index} />;
+            })}
+          </div>
         </>
       ) : (
         <h2>Loading images...</h2>
